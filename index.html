@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Esame</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Aggiunto onclick a <h1> per chiamare resetView() -->
+        <h1 onclick="resetView()">Dataset Esame</h1>
+        <div class="menu-container">
+            <button id="menu-button">Menu</button>
+            <ul id="dropdown-menu" class="menu">
+                <li><a href="#">Vis1</a></li>
+                <li><a href="#">Vis2</a></li>
+                <li><a href="#">Vis3</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Contenitore della griglia con onclick per caricare le visualizzazioni -->
+    <div class="grid-container">
+        <div class="grid-item" onclick="showGraph('map')">Mappa medaglie</div>
+        <div class="grid-item" onclick="showGraph('medals')">Medaglie oro argento bronzo</div>
+        <div class="grid-item" onclick="showGraph('women')">Partecipazione femminile</div>
+        <div class="grid-item" onclick="showGraph('matches')">Scontri</div>
+    </div>
+
+    <!-- Contenitore dinamico per il contenuto, inizialmente vuoto -->
+    <div id="graph-container" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
