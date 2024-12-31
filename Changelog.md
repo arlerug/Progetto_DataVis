@@ -1,4 +1,8 @@
 # Progetto_DataVis
+24.12.31
+Ho caricato tutti i file in una cartella così ad ogni modifica sostanziale carichiamo una nuova cartella mantenendo le versioni vecchie.
+Aggiunto a map slider per gli anni. Da aggiungere grafo delle medaglie per ogni stato. Ho dovuto fare delle piccole modifiche all'hatml, ma cercherò di integrarle in map perche l'hatml dovrebbe essere più asciutto possibile.
+
 24.12.30
 Al momento:
 -index.html contiene il menu a scomparsa, la griglia dei pulsanti e un eventuale blocco per la visualizzaizone die grafi che appare quando scompaiono i pulsanti. 
