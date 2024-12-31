@@ -43,43 +43,37 @@ function showGraph(graphName) {
     const scriptId = `script-${graphName}`;
     const existingScript = document.getElementById(scriptId);
 
-    // Controlla se il file è già stato caricato
-    if (existingScript) {
-        console.log(`${graphName}.js already loaded.`);
-       
-    }
-
     // Nasconde i pulsanti
     const gridContainer = document.querySelector(".grid-container");
     gridContainer.style.display = "none";
 
-    // Mostra o crea il contenitore per il contenuto dinamico
+    // Mostra o crea il contenitore per il grafico
     let graphContainer = document.getElementById("graph-container");
     if (!graphContainer) {
         graphContainer = document.createElement("div");
         graphContainer.id = "graph-container";
-        graphContainer.style.padding = "20px";
         graphContainer.style.textAlign = "center";
         document.body.appendChild(graphContainer);
     }
-    graphContainer.style.display = "block"; // Mostra il contenitore
-    graphContainer.innerHTML = `<p>Loading ${graphName} visualization...</p>`;
+    graphContainer.style.display = "block";
+    graphContainer.innerHTML = ""; // Pulisce il contenitore
 
-    // Carica dinamicamente il file JavaScript
-    const script = document.createElement("script");
-    script.src = `${graphName}.js`;
-    script.id = scriptId;
+    // Carica dinamicamente lo script se non esiste già
+    if (!existingScript) {
+        const script = document.createElement("script");
+        script.src = `${graphName}.js`;
+        script.id = scriptId;
 
-    script.onload = () => {
-        console.log(`${graphName}.js loaded successfully.`);
-        graphContainer.innerHTML = ""; // Pulisce il contenitore per il disegno
-    };
-    script.onerror = () => {
-        console.error(`Error loading ${graphName}.js.`);
-        graphContainer.innerHTML = `<p>Failed to load ${graphName} visualization.</p>`;
-    };
+        script.onload = () => {
+            console.log(`${graphName}.js loaded successfully.`);
+        };
+        script.onerror = () => {
+            console.error(`Error loading ${graphName}.js.`);
+            graphContainer.innerHTML = `<p>Failed to load ${graphName} visualization.</p>`;
+        };
 
-    document.body.appendChild(script);
+        document.body.appendChild(script);
+    }
 }
 
 
