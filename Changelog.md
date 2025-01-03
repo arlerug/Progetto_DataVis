@@ -1,4 +1,7 @@
 # Progetto_DataVis
+25.1.3
+Ale: caricatio datavis 3 in cui ho risolto il problema dello scatterplot e dei nomi delle nazioni. Germania est e ovest contano come germania e urss conta come russia. Risolto problema dell'apertura delle visualizzazioni la seconda volta. ora il file js della visualizzazione viene rimosso.
+
 25.1.1
 Ale: Buon anno! Aggiunto scatterplot che cambia al cambiare della tooltip sul grfico. da rivedere disegno scatterplot di alucni dati
 
