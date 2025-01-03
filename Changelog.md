@@ -1,5 +1,6 @@
 # Progetto_DataVis
 25.1.3
+Ale: datavis 6 perfezionata visualizzazione mappa, aggiunte immagini alla schermata iniziale.
 Ale: caricatio datavis 3 in cui ho risolto il problema dello scatterplot e dei nomi delle nazioni. Germania est e ovest contano come germania e urss conta come russia. Risolto problema dell'apertura delle visualizzazioni la seconda volta. ora il file js della visualizzazione viene rimosso.
 
 25.1.1
