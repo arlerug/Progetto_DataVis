@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #6200ea;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer; /* Aggiunto per indicare che è cliccabile */
+}
+
+.menu-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#menu-button {
+    background-color: #03dac5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#menu-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+#dropdown-menu {
+    display: none; /* Nasconde il menu inizialmente */
+    background-color: white;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#dropdown-menu li {
+    padding: 10px;
+    text-align: center;
+}
+
+#dropdown-menu li a {
+    text-decoration: none;
+    color: #6200ea;
+    display: block;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Ogni item occupa 1/4 dello spazio */
+    gap: 20px;
+    padding: 20px;
+    margin: 0 20px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Nasconde la griglia quando necessario */
+.grid-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 🌟 Stile per ogni elemento della griglia */
+.grid-item {
+    width:100% /4;
+    background-color: #03dac5;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Effetto hover */
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🌟 Stile per le immagini nei pulsanti */
+.grid-item img {
+    width: calc(100%); /* Adatta la dimensione delle immagini */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#button-title{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Stile per il contenitore della visualizzazione */
+#graph-container {
+    visibility: hidden;
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out;
+}
+
+#graph-container.active {
+    display: block; /* Mostra il contenitore quando è attivo */
+    opacity: 1;
+}
+
