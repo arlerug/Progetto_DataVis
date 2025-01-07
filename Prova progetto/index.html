@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Esame</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script> 
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Aggiunto onclick a <h1> per chiamare resetView() -->
+        <h1 onclick="refreshPage()">Olympics analysis</h1>
+        <div class="menu-container">
+            <button id="menu-button">Menu</button>
+            <ul id="dropdown-menu" class="menu">
+                <li><a href="#">Vis1</a></li>
+                <li><a href="#">Vis2</a></li>
+                <li><a href="#">Vis3</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- Contenitore della griglia con onclick per caricare le visualizzazioni -->
+    <div class="grid-container">
+        <div class="grid-item" onclick="showGraph('Map')">
+            <img src="images/map.png" alt="Mappa Medaglie" class="home-image">
+            <span id="button-title">Mappa medaglie</span>
+        </div>
+        <div class="grid-item" onclick="showGraph('medals')">
+            <img src="images/treemap.png" alt="Treemap Medaglie" class="home-image">
+            <span id="button-title">Medaglie oro argento bronzo</span>
+        </div>
+        <div class="grid-item" onclick="showGraph('women')">
+            <img src="images/women.png" alt="women" class="home-image">
+            <span id="button-title"> Partecipazione femminile</span>
+        </div>
+        <div class="grid-item" onclick="showGraph('matches_chord')">
+            <img src="images/matches.png" alt="matches" class="home-image">
+            <span id="button-title">Scontri</span>
+        </div>
+    </div>
+    
+
+    <!-- Aggiungi lo slider qui -->
+
+
+    <!-- Contenitore dinamico per il contenuto, inizialmente vuoto -->
+    <div id="graph-container"></div>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>
