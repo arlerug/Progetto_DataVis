@@ -167,7 +167,7 @@ function initializeWomen(filePath) {
             ([, valueA], [, valueB]) => valueB - valueA
           );
 
-          const columns = 3; // Numero massimo di discipline per riga
+          const columns = 3; // Numero massimo di discipline per riga della legenda
           const rows = Math.ceil(disciplineEntries.length / columns);
           const tooltipWidth = Math.max(300, columns * 100); // Larghezza dinamica
 
@@ -191,7 +191,7 @@ function initializeWomen(filePath) {
 
           const xTooltipScale = d3
             .scaleBand()
-            .domain(Object.keys(disciplines))
+            .domain(disciplineEntries.map(([key]) => key)) // Usa le chiavi ordinate
             .range([0, tooltipInnerWidth])
             .padding(0.2);
 
