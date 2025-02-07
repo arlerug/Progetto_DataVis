@@ -45,11 +45,9 @@ Per una descrizione dettagliata del progetto, consulta il file [Progetto_InfoVis
 ---
 
 ## 👨‍💻 Autori
-- **Daniele Angeloni**
-- **Alessandra Ruggeri**
+- **Alessandra Ruggeri** - [alessandra.ruggeri@studenti.unipg.it](mailto:alessandra.ruggeri@studenti.unipg.it)
+- **Daniele Angeloni** - [daniele.angeloni@studenti.unipg.it](mailto:daniele.angeloni@studenti.unipg.it)
 
 Università degli Studi di Perugia - **Anno Accademico 2024/2025** 📅
 
----
 
-💡 **Note**: Questo progetto segue il paradigma di interazione di Shneiderman **"Overview first, zoom and filter, then details-on-demand"**, garantendo un’esperienza utente fluida ed efficace.
